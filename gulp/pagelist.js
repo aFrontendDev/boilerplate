@@ -10,7 +10,7 @@ var pageList = require('./page-list');
 var livereload = require('gulp-livereload');
 
 gulp.task('pagelist', function() {
-  return gulp.src('src/pages/index.hbs')
+  return gulp.src('src/pages/_listings.hbs')
     .pipe(frontMatter({
       property: 'data.pageData',
       remove: true

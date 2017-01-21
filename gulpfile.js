@@ -81,7 +81,7 @@ gulp.task('watch', ['build'], function() {
 gulp.task('serve', ['build', 'watch'], function(callback) {
   var open = require('open');
   var serverPort = Math.floor((Math.random() * 1000) + 3000);
-  var localhost = 'http://localhost:' + serverPort;
+  var localhost = 'http://localhost:' + serverPort + '/_listings.html';
 
   connect.server({
     host: 'localhost',
