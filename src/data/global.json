@@ -1,0 +1,10 @@
+{
+    "name": "Boilerplate",
+    "title": "Boilerplate Site Template",
+    "description": "Boilerplate project setup",
+    "styles": "_styles",
+    "scripts": "_scripts",
+    "mainCss": "styles.css",
+    "images": "images",
+    "copyrightYear": "2017"
+}

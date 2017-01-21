@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+
+# Logging
+*.log
+logs
+tmp
+
+# Don’t commit dependencies! >:(
+node_modules
+
+# Project meta
+.sass-cache
+
+# Generated files
+dist
+
