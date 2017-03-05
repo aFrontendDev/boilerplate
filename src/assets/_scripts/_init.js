@@ -6,7 +6,7 @@ function ready() {
     // Add init functions here to page ready
     example.init();
   } else {
-    document.addEventListener('DOMContentLoaded');
+    document.addEventListener('DOMContentLoaded', false);
   }
 }
 
