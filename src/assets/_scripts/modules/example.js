@@ -1,19 +1,21 @@
 /**
 * @file example - test related JavaScript
 */
-var example = (function() {
-    var globalObject = {};
+var siteObj = siteObj ? siteObj : {};
 
-    function privateFunction () {
-        console.log('example js');
-    }
+(function() {
+    siteObj.example = {
+        exampleString: 'a string',
 
-    globalObject.exampleString = 'a string';
+        privateFunction: function() {
+            var self = this;
+            console.log(this.exampleString);
+        },
 
-    globalObject.init = function () {
-        privateFunction();
+        init: function () {
+            var self = this;
+            self.privateFunction();
+        }
     };
-
-    return globalObject;
 }());
 
