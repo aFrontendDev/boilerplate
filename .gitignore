@@ -1,17 +1,38 @@
+# debugging
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.yo-rc.json
+pids
+logs
+results
+
 # OS
 .DS_Store
+Desktop.ini
+._*
+Thumbs.db
+.Spotlight-V100
+.Trashes
 
-# Logging
-*.log
-logs
-tmp
+# project meta
+*.sublime-workspace
 
-# Don’t commit dependencies! >:(
+# installed components
+bower_components
 node_modules
 
-# Project meta
-.sass-cache
-
-# Generated files
+# generated components
 dist
-
+build
+test/results
+backstop_data/bitmaps_test
+FRONTEND.md
+TODO.md
+_combined.less
+/_pages/index.html
