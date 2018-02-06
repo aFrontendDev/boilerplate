@@ -5,14 +5,9 @@ var runSequence = require('run-sequence').use(gulp);
 
 gulp.task('assets', function(callback) {
   runSequence(
-    ['assets-bb', 'assets-fonts', 'assets-images', 'assets-temp', 'assets-plugins', 'assets-loadscript'],
+    ['assets-fonts', 'assets-images', 'assets-temp', 'assets-plugins', 'assets-loadscript'],
     callback
   );
-});
-
-gulp.task('assets-bb', function() {
-  return gulp.src(config.paths.bb.src + '**/*')
-    .pipe(gulp.dest(config.paths.bb.dist));
 });
 
 gulp.task('assets-fonts', function() {

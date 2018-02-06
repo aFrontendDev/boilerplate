@@ -16,8 +16,8 @@ var siteObj = siteObj ? siteObj : {};
 		breakPointB: 480,
 		breakPointC: 600,
 		breakPointD: 768,
-		breakPointE: 1000,
-		breakPointF: 1200,
-		breakPointG: 1360
+		breakPointE: 1024,
+		breakPointF: 1400,
+		breakPointG: 1600
 	};
 }());

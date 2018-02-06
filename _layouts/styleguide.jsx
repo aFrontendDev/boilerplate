@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 // header and footer to be included on every page
 import Header from '../_components/header.jsx';
 import Footer from '../_components/footer.jsx';
-import Grid from '../_components/grid.jsx';
 
 // add components here
 import Styleguide from '../_components/styleguide/styleguide.jsx';
@@ -34,11 +33,6 @@ class StyleguidePage extends React.Component {
               </div>
             </div>
 
-            {
-              visibleGrid ? 
-              <Grid />
-              : null
-            }
             
           </main>
         </div>

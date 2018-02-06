@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 // header and footer to be included on every page
 import Header from '../_components/header.jsx';
 import Footer from '../_components/footer.jsx';
-import Grid from '../_components/grid.jsx';
 
 // add components here
 import Test from '../_components/test.jsx';
@@ -52,12 +51,6 @@ class LayoutA extends React.Component {
                     return <Test data={component} key={index}/>
                 }
               })
-            }
-
-            {
-              visibleGrid ? 
-              <Grid />
-              : null
             }
             
           </main>

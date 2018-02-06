@@ -147,8 +147,8 @@ $break-point-e-em: #{$break-point-e-em-val}em;
 $break-point-e: $break-point-e-em;
 
 // $breakpoint-laptop 
-$break-point-f-px: 1460px;
-$break-point-f-em-val: 1460 / 16;
+$break-point-f-px: 1400px;
+$break-point-f-em-val: 1400 / 16;
 $break-point-f-em: #{$break-point-f-em-val}em;
 // Set to -px or -em
 $break-point-f: $break-point-f-em;
@@ -176,5 +176,5 @@ $MaxBPB: "(max-width: 479px)";
 $MaxBPC: "(max-width: 599px)";
 $MaxBPD: "(max-width: 767px)";
 $MaxBPE: "(max-width: 1023px)";
-$MaxBPF: "(max-width: 1459px)";
+$MaxBPF: "(max-width: 1399px)";
 $MaxBPG: "(max-width: 1599px)";
