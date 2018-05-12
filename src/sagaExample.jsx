@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import * as dogActions from "./actions/dogAction/getDogActions";
 
 class SagaExample extends Component {
   render() {
@@ -32,17 +33,16 @@ class SagaExample extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state);
   return {
     fetching: state.fetching,
-    dog: state.dog,
+    dog: state.dog.dog,
     error: state.error
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onRequestDog: () => dispatch({ type: "API_CALL_REQUEST" })
-  };
+const mapDispatchToProps = {
+  onRequestDog: dogActions.fetchDog
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SagaExample);

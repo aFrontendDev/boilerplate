@@ -5,8 +5,8 @@ import { createStore, applyMiddleware, compose } from "redux";
 import createSagaMiddleware from "redux-saga";
 import { Provider } from "react-redux";
 
-import { reducer } from "./redux";
-import { watcherSaga } from "./sagas";
+import rootSaga from "./rootSaga";
+import rootReducer from "./rootReducer";
 
 import App from "./app.jsx";
 
@@ -14,12 +14,12 @@ import App from "./app.jsx";
 const sagaMiddleware = createSagaMiddleware();
 
 let store = createStore(
-  reducer,
+  rootReducer,
   compose(applyMiddleware(sagaMiddleware))
 );
 
 // run the saga
-sagaMiddleware.run(watcherSaga);
+sagaMiddleware.run(rootSaga);
 
 import style from './test.scss';
 
