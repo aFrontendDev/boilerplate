@@ -7,9 +7,10 @@ const htmlPlugin = new HtmlWebPackPlugin({
   filename: "index.html",
   inject: "body"
 });
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: ['babel-polyfill', './src/index.js'],
+  entry: ['babel-polyfill', './src/index.js', './src/_styles/main.scss'],
   output: {
     path: path.resolve('dist'),
     publicPath: '/',
@@ -23,6 +24,15 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.scss$/,
+        exclude: [/src\/pages/, /src\/sharedComponents/],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          //resolve-url-loader may be chained before sass-loader if necessary
+          use: ['css-loader', 'sass-loader']
+        })
+      },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -41,6 +51,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        exclude: /src\/_styles/,
         use: [
           {
             loader: "style-loader" // creates style nodes from JS strings
@@ -70,6 +81,7 @@ module.exports = {
           drop_console: true
         }
       }
-    })
+    }),
+    new ExtractTextPlugin("styles.css")
   ]
 };

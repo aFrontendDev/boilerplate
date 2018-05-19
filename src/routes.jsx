@@ -4,9 +4,9 @@ import {
 } from 'react-router-dom';
 
 // Pages
-import SagaExample from './sagaExample.jsx';
-import DynamicPage from './dynamic.jsx';
-import Home from './home.jsx';
+import Dogs from './pages/dogs/index.jsx';
+import DynamicPage from './pages/dynamic/index.jsx';
+import Home from './pages/home/index.jsx';
 
 class Routes extends React.Component {
   render() {
@@ -14,7 +14,7 @@ class Routes extends React.Component {
     return (
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/saga" component={SagaExample} />
+        <Route exact path="/dogs" component={Dogs} />
         <Route exact path="/dynamic/:anId" component={DynamicPage} />
         <Route component={Home} />
       </Switch>

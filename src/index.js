@@ -21,7 +21,7 @@ let store = createStore(
 // run the saga
 sagaMiddleware.run(rootSaga);
 
-import style from './test.scss';
+// import style from './_styles/main.scss';
 
 ReactDOM.render(
   <Provider store={store}>
