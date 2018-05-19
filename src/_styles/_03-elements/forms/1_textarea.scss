@@ -6,10 +6,10 @@ textarea {
     resize: none;
     white-space: normal;
     overflow: auto;
-    height: $vr*30;
+    @include rem(height, $vr*30);
     white-space: pre;
-    margin: 0 0 $vr;
-    padding: 10px 20px;
+    @include rem(margin, 0 0 $vr);
+    @include rem(padding, 10px 20px);
     border-radius: $input-border-radius;
     background-color:  transparent;
 }

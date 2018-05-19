@@ -93,22 +93,3 @@ img {
 	}
 }
 
-
-.btn-no-style.visible-grid-btn {
-	display: block;
-	position: fixed;
-	bottom: $vr*3;
-	left: $vr*3;
-	z-index: 1002;
-	border: 1px solid currentColor;
-	background-color: #fff;
-	padding: $vr 10px;
-
-	.demo-actions & {
-		position: relative;
-		bottom: auto;
-		left: auto;
-		float: left;
-		margin-right: 5px;
-	}
-}

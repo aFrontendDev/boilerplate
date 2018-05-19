@@ -2,8 +2,8 @@
 
 ul,
 ol {
-	margin: $vr*2 0;
-	padding-left: $ggw;
+	@include rem(margin, $vr*2 0);
+	@include rem(padding-left, $ggw);
 }
 
 .list--unstyled {

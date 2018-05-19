@@ -21,16 +21,16 @@
 		// smallest
 		content: '$break-point-a';
 		font-weight: $font-weight-bold;
-		padding: $vr $vr*2;
+		@include rem(padding, $vr $vr*2);
 		position: fixed;
-		right: $vr*3;
-		bottom: $vr*3;
+		@include rem(right, $vr*3);
+		@include rem(bottom, $vr*3);
 		text-align: center;
 		z-index: 1000;
 	}
 
 	@media (min-width: $break-point-b) {
-		width: $break-point-b-px;
+		@include rem(width, $break-point-b-px);
 
 		.visible-breakpoints &:after {
 			content: '$break-point-b';
@@ -38,7 +38,7 @@
 	}
 
 	@media (min-width: $break-point-c) {
-		width: $break-point-c-px;
+		@include rem(width, $break-point-c-px);
 
 		.visible-breakpoints &:after {
 			content: '$break-point-c';
@@ -46,7 +46,7 @@
 	}
 
 	@media (min-width: $break-point-d) {
-		width: $break-point-d-px;
+		@include rem(width, $break-point-d-px);
 
 		.visible-breakpoints &:after {
 			content: '$break-point-d';
@@ -54,7 +54,7 @@
 	}
 
 	@media (min-width: $break-point-e) {
-		width: $break-point-e-px;
+		@include rem(width, $break-point-e-px);
 
 		.visible-breakpoints &:after {
 			content: '$break-point-e';
@@ -62,7 +62,7 @@
 	}
 
 	@media (min-width: $break-point-f) {
-		width: $break-point-f-px;
+		@include rem(width, $break-point-f-px);
 
 		.visible-breakpoints &:after {
 			content: '$break-point-f';
@@ -70,7 +70,7 @@
 	}
 
 	@media (min-width: $break-point-g) {
-		width: $break-point-g-px;
+		@include rem(width, $break-point-g-px);
 
 		.visible-breakpoints &:after {
 			content: '$break-point-g';
@@ -78,7 +78,7 @@
 	}
 
 	@media (min-width: $break-point-h) {
-		width: $break-point-g-px;
+		@include rem(width, $break-point-h-px);
 
 		.visible-breakpoints &:after {
 			content: '$break-point-h +';

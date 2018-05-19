@@ -15,12 +15,12 @@
 	+ .toggle-label {
 		outline: 0;
 		display: block;
-		width: 80px;
-		height: 40px;
+		@include rem(width, 80px);
+		@include rem(height, 40px);
 		position: relative;
 		cursor: pointer;
-    user-select: none;
-    padding: 5px;
+		user-select: none;
+		@include rem(padding, 5px);
 		transition: all .2s ease;
 		background: $gray-g;
 		border: 2px solid $gray-a;
@@ -33,7 +33,7 @@
 			display: block;
 			width: 50%;
 			height: 100%;
-      max-width: 30px;
+			@include rem(max-width, 30px);
 		}
     
 		&:after {

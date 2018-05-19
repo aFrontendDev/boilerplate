@@ -73,42 +73,6 @@ textarea {
 	width: 100%;
 }
 
-@media #{$BPD} {
-
-	.input--mini {
-		width: ($gcw*2) + ($ggw*1);
-	}
-
-	.input--small {
-		width: ($gcw*3) + ($ggw*2);
-	}
-
-	.input--medium {
-		width: ($gcw*4) + ($ggw*3);
-	}
-
-	.input--large {
-		width: ($gcw*5) + ($ggw*4);
-	}
-
-	.input--xlarge {
-		width: ($gcw*6) + ($ggw*5);
-	}
-
-	.input--xxlarge {
-		width: ($gcw*7) + ($ggw*6);
-	}
-
-	.input--xxxlarge {
-		width: ($gcw*8) + ($ggw*7);
-	}
-
-	.input--xxxxlarge {
-		width: ($gcw*9) + ($ggw*8);
-		max-width: 90%;
-	}
-}
-
 
 
 // Reset the file input to browser defaults
@@ -135,11 +99,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .field-validation-message {
-	font-size: 12px;
+	@include rem(font-size, 12px);
 }
 
 .form-title {
-	font-size: 21px;
+	@include rem(font-size, 21px);
 }
 
 .important-text {
@@ -149,9 +113,9 @@ input[type=number]::-webkit-outer-spin-button {
 // Inputs, Textareas, Selects
 input,
 textarea {
-	padding: 0 20px;
+	@include rem(padding, 0 20px);
 	max-width: 100%;
-	font-size: 14px;
+	@include rem(font-size, 14px);
 	font-weight: $font-weight-regular;
 	color: $gray-e;
 	background: $brand-white;
@@ -161,13 +125,13 @@ textarea {
 	display: inline-block;
 	transition: all 100ms;
 	white-space: nowrap;
-	height: 50px;
+	@include rem(height, 50px);
 	outline: none;
 	margin-bottom: $vr;
 
 	@media #{$BPD} {
 		padding: 0 $input-padding-x;
-		height: 50px;
+		@include rem(height, 50px);
 	}
 
 	&.input--has-value {

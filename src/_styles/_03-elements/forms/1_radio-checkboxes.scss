@@ -15,7 +15,7 @@ input[type="checkbox"] {
 }
 
 input[type="radio"] {
-	margin-top: 4px;
+	@include rem(margin-top, 4px);
 }
 
 .radio,
@@ -23,18 +23,18 @@ input[type="radio"] {
 	margin-bottom: $vr;
 	display: block;
 	position: relative;
-	padding-left: 50px;
-	padding-top: $vr;
-	line-height: 35px;
+	@include rem(padding-left, 50px);
+	@include rem(padding-top, $vr);
+	@include rem(line-height, 35px);
 
 	@media #{$BPE} {
-		padding-top: $vr;
+		@include rem(padding-top, $vr);
 	}
 
 	&:first-child {
 
 		@media #{$BPD} {
-			margin-top: $vr;
+			@include rem(margin-top, $vr);
 		}
 	}
 
@@ -84,7 +84,7 @@ input[type="radio"] {
 	.checkbox--replace,
 	.radio--replace {
 		position: absolute;
-		top: 7px;
+		@include rem(top, 7px);
 		left: 0;
 	}
 
@@ -95,8 +95,8 @@ input[type="radio"] {
 
 .checkbox--replace,
 .radio--replace {
-	width: 30px;
-	height: 30px;
+	@include rem(width, 30px);
+	@include rem(height, 30px);
 	padding: 0;
 	margin: 0;
 	outline: 0;
@@ -152,13 +152,13 @@ input[type="checkbox"]:checked {
 	&:after {
 		content: '';
 		position: absolute;
-		top: -10px;
+		@include rem(top, -10px);
 		left: 0;
-		width: 30px;
-		height: 30px;
+		@include rem(width, 30px);
+		@include rem(height, 30px);
 		line-height: 100%;
 		text-align: center;
-		font-size: 40px;
+		@include rem(font-size, 40px);
 		font-family: $icon-font;
 		content: "\e903"; // a tick
 		display: none;
@@ -203,8 +203,8 @@ input[type="checkbox"]:checked {
 		border-color: $gray-d;
 
 		&:after {
-			width: 18px;
-			height: 18px;
+			@include rem(width, 18px);
+			@include rem(height, 18px);
 		}
 	}
 
